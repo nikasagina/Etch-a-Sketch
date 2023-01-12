@@ -22,10 +22,10 @@ function addResizeListener(){
     const resizeButton = document.querySelector('#resize');
 
     resizeButton.addEventListener('click', ()=>{
-        let dim = prompt("Enter number of rows and columns (1 number only)");
+        let dim = prompt("Enter the dimension of square gird (1-50)");
         dim = parseInt(dim);
 
-        if(!Number.isInteger(dim)) return;
+        if(!Number.isInteger(dim) || dim < 1 || dim > 50) return;
         
         const gridContainer = document.querySelector('#grid-container');
         const oldRows = document.querySelectorAll('.grid-row');
